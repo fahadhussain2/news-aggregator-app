@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - '3001:3001'
+    environment:
+      VITE_NEWS_DATA_KEY: pub_3317264281932b7a30fa0c12d13980e76f069

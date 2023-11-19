@@ -1,53 +1,59 @@
 export const dataSources = [
   {
-    value: "",
-    label: ""
+    value: "nytimes",
+    label: "New York Times",
   },
   {
-    value: "news-api",
-    label: "News API"
+    value: "theguardiantheguardian",
+    label: "The Guardian",
   },
   {
-    value: "source-2",
-    label: "Source 2"
+    value: "bbc",
+    label: "BBC",
   },
   {
-    value: "source-3",
-    label: "Source 3"
+    value: "espn",
+    label: "ESPN",
   },
-]
+];
 
-export const newsAPICategories = [
-  {
-    value: "",
-    label: ""
-  },
+export const categories = [
   {
     value: "business",
-    label: "Business"
+    label: "Business",
   },
   {
     value: "entertainment",
-    label: "Entertainment"
-  },
-  {
-    value: "general",
-    label: "General"
-  },
-  {
-    value: "health",
-    label: "Health"
+    label: "Entertainment",
   },
   {
     value: "science",
-    label: "Science"
+    label: "Science",
   },
   {
     value: "sports",
-    label: "Sports"
+    label: "Sports",
   },
   {
     value: "technology",
-    label: "Technology"
+    label: "Technology",
   },
-]
+];
+
+export const category:{ [key: string]: string } = {
+  business: "Business",
+  crime: "Crime",
+  domestic: "Domestic",
+  education: "Education",
+  food: "Food",
+  other: "Other",
+  politics: "Politics",
+  top: "Top",
+  tourism: "Tourism",
+  world: "World",
+  entertainment: "Entertainment",
+  health: "Health",
+  science: "Science",
+  sports: "Sports",
+  technology: "Technology",
+}

@@ -1,17 +1,21 @@
-import { Outlet } from "react-router-dom"
-import Footer from "./components/Footer"
-import Header from "./components/Header"
+import { Outlet } from "react-router-dom";
+import Header from "../Header";
+import Footer from "../Footer";
+import { useState } from "react";
+import Preferences from "../Preferences";
 
 const RootLayout = () => {
+  const [modalOpen, setModalOpen] = useState<boolean>(false);
   return (
-    <div className="min-h-screen min-w-screen flex flex-col">
-      <Header />
-      <div className="flex-grow w-full max-w-4xl p-2 mx-auto">
+    <div id="root-layout">
+      <Header setModalOpen={setModalOpen}/>
+      <main className="flex-grow w-full max-w-4xl md:p-2 mx-auto">
         <Outlet />
-      </div>
+      </main>
       <Footer />
+      <Preferences modalOpen={modalOpen} setModalOpen={setModalOpen} />
     </div>
-  )
-}
+  );
+};
 
-export default RootLayout
+export default RootLayout;

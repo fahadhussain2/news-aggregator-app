@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  #root-layout {
+    @apply min-h-screen flex flex-col;
+  }
   .form-item{
     @apply p-2;
   }
