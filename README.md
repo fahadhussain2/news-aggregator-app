@@ -21,4 +21,4 @@ https://news-aggregator-app.vercel.app/
 
 ## API Constraints
  - API key has a usage limit (200 request per API key).
- - API does not support date filtering
+ - API does not support date filtering that's why the date filter is not implemented in the UI
