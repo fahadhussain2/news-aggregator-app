@@ -18,3 +18,7 @@ https://news-aggregator-app.vercel.app/
 
 ## News Aggregator API Used
   https://newsdata.io/
+
+## Constraints
+ - API key has a usage limit (200 request per API key).
+ - API does not support date filtering
