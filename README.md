@@ -15,3 +15,6 @@ https://news-aggregator-app.vercel.app/
  - Typescript
  - TailwindCSS
  - AntDesign
+
+## News Aggregator API Used
+  https://newsdata.io/
