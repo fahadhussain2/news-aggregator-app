@@ -77,9 +77,10 @@ const News = () => {
             <Spin indicator={<LoadingOutlined />} />
           </div>
         )}
-        {news?.length > 0 ? (
-          news.map((newsData, idx) => <NewsCard key={idx} data={newsData} />)
-        ) : (
+        {news?.length > 0 &&
+          news.map((newsData, idx) => <NewsCard key={idx} data={newsData} />)}
+
+        {news.length === 0 && !loading && (
           <Typography.Paragraph className="py-4 text-center">
             Couldnt find any news that matches your filtering.
           </Typography.Paragraph>

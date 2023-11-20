@@ -1,4 +1,4 @@
-import { Button, Typography } from "antd";
+import { Button, Typography, Layout } from "antd";
 import React from "react";
 
 const Header = ({
@@ -8,14 +8,14 @@ const Header = ({
 }) => {
   const { Title } = Typography;
   return (
-    <header className="relative">
-      <div className="flex justify-end pt-2 pr-2">
-        <Button onClick={() => setModalOpen(true)}>Preferences</Button>
-      </div>
-      <Title level={2} className="text-center my-0 pt-4">
+    <Layout.Header className="flex justify-between items-center">
+      <Title level={4} className="text-white mt-2">
         News Aggregator App
       </Title>
-    </header>
+      <Button type="primary" onClick={() => setModalOpen(true)}>
+        Preferences
+      </Button>
+    </Layout.Header>
   );
 };
 

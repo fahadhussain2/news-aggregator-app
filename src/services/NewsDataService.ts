@@ -4,19 +4,25 @@ import { NewsDataParams, NewsDataResponse, NewsPreferencesParam } from "src/util
 const baseUrl = "https://newsdata.io/api/1";
 const apiKey = import.meta.env.VITE_NEWS_DATA_KEY;
 
-const getLatest = async (preferences:NewsPreferencesParam = {
+const getParams = () => {
+  const params: NewsDataParams = {
+    apiKey: apiKey || "", // Default to an empty string if apiKey is undefined
+    language: "en",
+  };
+
+  return params
+}
+
+const getLatest = async (preferences: NewsPreferencesParam = {
   keywords: "",
   categories: "",
   sources: ""
-}):Promise<NewsDataResponse> => {
-  const params:NewsDataParams = {
-    apiKey,
-    language: "en",
-  };
-  if(preferences.categories){
+}): Promise<NewsDataResponse> => {
+  const params: NewsDataParams = getParams()
+  if (preferences.categories) {
     params.category = preferences.categories;
   }
-  if(preferences.sources){
+  if (preferences.sources) {
     params.domain = preferences.sources;
   }
 
@@ -30,18 +36,15 @@ const searchNews = async (
   keywords: string = "",
   category: string = "",
   sources: string = "",
-):Promise<NewsDataResponse> => {
-  const params:NewsDataParams = {
-    apiKey,
-    language: "en",
-  };
-  if(keywords){
+): Promise<NewsDataResponse> => {
+  const params: NewsDataParams = getParams()
+  if (keywords) {
     params.q = keywords
   }
-  if(category){
+  if (category) {
     params.category = category
   }
-  if(sources){
+  if (sources) {
     params.domain = sources
   }
   const res = await axios.get(`${baseUrl}/news`, {

@@ -9,3 +9,5 @@ services:
       - '3001:3001'
     environment:
       VITE_NEWS_DATA_KEY: pub_3317264281932b7a30fa0c12d13980e76f069
+    volumes:
+      - .:/home/node/app

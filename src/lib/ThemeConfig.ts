@@ -4,11 +4,11 @@ const theme = {
     colorText: "black"
   },
   components: {
+    Layout: {
+      colorBgHeader: "#46494C",
+    },
     App: {
       colorText: "black",
-    },
-    Button: {
-
     }
   }
 };

@@ -29,20 +29,26 @@ const CheckboxDropdown = ({
   const items: MenuProps["items"] = options.map((cat) => ({
     key: cat.value,
     label: (
-      <Form.Item
-        name={[name, cat.value]}
-        className={`mb-0`}
-        valuePropName="checked"
+      <div
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
       >
-        <Checkbox
-          onClick={(e) => {
-            e.stopPropagation();
-          }}
-          className="h-full"
+        <Form.Item
+          name={[name, cat.value]}
+          className={`mb-0`}
+          valuePropName="checked"
         >
-          {cat?.label ?? cat?.value}
-        </Checkbox>
-      </Form.Item>
+          <Checkbox
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
+            className="h-full"
+          >
+            {cat?.label ?? cat?.value}
+          </Checkbox>
+        </Form.Item>
+      </div>
     ),
   }));
 
