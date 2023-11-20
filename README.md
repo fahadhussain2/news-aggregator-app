@@ -6,8 +6,8 @@
 - Clone app
 - Run `docker compose up --build`
 
-  ## Deployed Link
-  https://news-aggregator-app.vercel.app/
+## Deployed Link
+https://news-aggregator-app.vercel.app/
 
 ## Tech Stack Used
  - React
