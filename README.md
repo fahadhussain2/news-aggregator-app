@@ -7,7 +7,7 @@
 - Run `docker compose up --build`
 
 ## Deployed Link
-https://news-aggregator-app.vercel.app/
+You can see the live app here https://news-aggregator-app.vercel.app/
 
 ## Tech Stack Used
  - React
